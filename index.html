@@ -330,7 +330,14 @@
              practice_procedure,
          ];
 
-         jsPsych.run(timeline);
+         if (! uil.browser.isMobileOrTablet()) {
+             jsPsych.run(timeline);
+         }
+         else {
+            let paragraph = document.createElement("p")
+            paragraph.innerHTML = BAIL_OUT_MOBILE_TEXT;
+            document.body.appendChild(paragraph);
+         }
      });
     </script>
   </body>
