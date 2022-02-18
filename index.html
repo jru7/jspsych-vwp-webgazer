@@ -157,6 +157,11 @@
              images: [],
          }
 
+         var browser_data = {
+             type: jsPsychCallFunction,
+             func: uil.browser.getResolutionInfo
+         };
+
          var enter_fullscreen = {
              type: jsPsychFullscreen,
              fullscreen_mode: true
@@ -310,12 +315,12 @@
 
          let timeline = [
              preload,
-
              start_screen,
              consent_procedure,
              survey_procedure,
              sound_test_instructions,
              test_audio_looped,
+             browser_data,
              camera_instructions,
              init_camera,
              enter_fullscreen,
