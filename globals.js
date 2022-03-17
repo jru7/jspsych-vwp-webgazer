@@ -5,7 +5,11 @@
 // ACCESS_KEY needs to be used for server setup (data store)
 const ACCESS_KEY = '00000000-0000-0000-0000-000000000000';
 
-// default value for pseudorandomisation restrictions
+//RANDOMIZATION
+
+// Whether or not to pseudorandomize the test items
+const PSEUDO_RANDOMIZE = true;
+// The maximum number of items with a similar itemtype in a row
 const MAX_SUCCEEDING_ITEMS_OF_TYPE = 2;
 
 // Default behavior of (sub) trial phases.

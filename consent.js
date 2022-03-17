@@ -10,6 +10,9 @@
 // to the end page, probably.
 // In this version, if you want things to look 'UU-legit', it takes a bunch of css within <style> tags
 
+// Keeps track whether or not consent has been given.
+let consent_given = false;
+
 function getConsentData()
 {
     let data = jsPsych.data.get().select('consent_choice_response');
@@ -158,6 +161,10 @@ const IF_REQUIRED_FEEDBACK_MESSAGE = `
         You must check the box next to '${CONSENT_STATEMENT}' in order to proceed to the experiment.
         `
 
+const FINISHED_NO_CONSENT =
+    "<h1>The experiment finished, because no consent was given</h1>"    +
+    "<p>You can close this tab now.</p>";
+
 let consent_block = {
     type: jsPsychSurveyMultiSelect,
     preamble: CONSENT_HTML_STYLE_UU + CONSENT_HTML,
@@ -192,6 +199,7 @@ let if_node_consent = {
     conditional_function: function(data){
         let mydata = getConsentData();
         if (mydata == CONSENT_STATEMENT){
+            consent_given = true;
             return false;
         } else {
             return true;
