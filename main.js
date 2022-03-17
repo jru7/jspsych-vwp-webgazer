@@ -61,13 +61,10 @@ let calibration_instructions = {
 
 let calibration = {
     type: jsPsychWebgazerCalibrate,
-    calibration_points: [
-        [25,25],[75,25],[50,50],[25,75],[75,75]
-        /* [50, 50] */
-    ],
+    calibration_points: CALIBRATION_POINTS,
     repetitions_per_point: 2,
     randomize_calibration_order: true,
-    calibration_mode: 'view',
+    calibration_mode: CALIBRATION_CLICK ? 'click':'view',
 }
 
 let validation_instructions = {
@@ -82,10 +79,7 @@ let validation_instructions = {
 
 let validation = {
     type: jsPsychWebgazerValidate,
-    validation_points: [
-        [25,25],[75,25],[50,50],[25,75],[75,75]
-        /* [50, 50] */
-    ],
+    validation_points: CALIBRATION_POINTS,
     roi_radius: 200,
     time_to_saccade: 1000,
     validation_duration: 2000,

@@ -31,3 +31,14 @@ const MIN_HEIGHT = 600;
 
 // Bail out string for mobiles
 const BAIL_OUT_MOBILE_TEXT = "Please run this experiment on a PC or Laptop."
+
+// Set this to true if you want participants to click on the calibration points
+// during the calibration phase:
+const CALIBRATION_CLICK = false;
+
+// Used to set the location of the points used for calibration and validation.
+// The coordinates are in screen percentage, e.g. [50, 50] corresponds to the middle of the screen.
+const CALIBRATION_POINTS =  [[25,25],[75,25],[50,50],[25,75],[75,75]];
+
+// For more calibration options, look for the 'calibrate' trial in main.js
+// and the jsPsych documentation: https://www.jspsych.org/7.1/plugins/webgazer-calibrate/
