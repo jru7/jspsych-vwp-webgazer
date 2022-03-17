@@ -18,12 +18,16 @@ const LISTS = ["default"];
 
 const PRACTICE_ITEMS = [
     {
-        id: 1, item_type: TARGET, image: './img/prac1_kr.png',
+        id: 1, item_type: PRACTICE, image: './img/prac1_kr.png',
         sound: './sounds/prac1_kr.wav',
     },
 ];
 
 const LIST_1 = [
+    {
+        id: 2, item_type: TARGET, image: './img/prac1_kr.png',
+        sound: './sounds/prac1_kr.wav',
+    },
 ];
 
 const TEST_ITEMS = [
