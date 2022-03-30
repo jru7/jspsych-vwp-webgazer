@@ -54,7 +54,8 @@ let calibration_instructions = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
                 <p>Now you'll calibrate the eye tracking, so that the software can use the image of your eyes to predict where you are looking.</p>
-                <p>You'll see a series of dots appear on the screen. Look at each dot as it appears.</p>
+                <p>You'll see a series of dots appear on the screen</p>
+                <p>Look at each dot as it appears on the screen, and keep looking until it disappears.</p>
              `,
     choices: ['Got it'],
 }
@@ -71,7 +72,7 @@ let validation_instructions = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
                 <p>Now we'll measure the accuracy of the calibration.</p>
-                <p>Look at each dot as it appears on the screen.</p>
+                <p>Look at each dot as it appears on the screen, and keep looking until it disappears.</p>
              `,
     choices: ['Got it'],
     post_trial_gap: 1000
@@ -94,7 +95,7 @@ let recalibrate_instructions = {
     stimulus: `
                 <p>The accuracy of the calibration is a little lower than we'd like.</p>
                 <p>Let's try calibrating one more time.</p>
-                <p>On the next screen, look at the dots and click on them.<p>
+                <p>Look at each dot as it appears on the screen, and keep looking until it disappears.</p>
              `,
     choices: ['OK'],
 }
