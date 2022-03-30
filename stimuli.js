@@ -18,15 +18,19 @@ const LISTS = ["default"];
 
 const PRACTICE_ITEMS = [
     {
-        id: 1, item_type: PRACTICE, image: './img/prac1_kr.png',
-        sound: './sounds/prac1_kr.wav',
+        id: 1, item_type: PRACTICE, image: './img/ChurchTableNecklaceRing.jpg',
+        sound: './sounds/BlinktEenKettingGras.wav',
     },
 ];
 
 const LIST_1 = [
     {
-        id: 2, item_type: TARGET, image: './img/prac1_kr.png',
-        sound: './sounds/prac1_kr.wav',
+        id: 2, item_type: TARGET, image: './img/TaartPlantPlasDiamant.jpg',
+        sound: './sounds/LigtEenPlasVeld.wav',
+    },
+    {
+        id: 3, item_type: TARGET, image: './img/BookCraddlePlantWheel.jpg',
+        sound: './sounds/LigtEenWielKamer.wav',
     },
 ];
 
