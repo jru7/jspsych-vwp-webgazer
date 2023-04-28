@@ -1,349 +1,145 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
 
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/jspsych.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-preload.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-html-button-response.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-html-keyboard-response.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-audio-keyboard-response.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-audio-button-response.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-image-keyboard-response.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-webgazer-init-camera.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-webgazer-calibrate.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-webgazer-validate.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-call-function.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-fullscreen.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-survey-multi-select.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-survey-multi-choice.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/plugin-survey-html-form.js"></script>
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/extension-webgazer.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/jspsych.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-preload.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-html-button-response.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-html-keyboard-response.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-audio-keyboard-response.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-audio-button-response.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-image-keyboard-response.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-webgazer-init-camera.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-webgazer-calibrate.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-webgazer-validate.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-call-function.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-fullscreen.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-survey-multi-select.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-survey-multi-choice.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/plugin-survey-html-form.js"></script>
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/extension-webgazer.js"></script>
 
-    <!-- Generic jspsych style sheet -->
-    <link rel="stylesheet" href="https://web-experiments.lab.hum.uu.nl/jspsych/7.0.0/jspsych.css" />
+        <!-- Generic jspsych style sheet -->
+        <link rel="stylesheet" href="https://web-experiments.lab.hum.uu.nl/jspsych/7.1.2/jspsych.css" />
 
-    <!-- Uil OTS libraries -->
-    <script src="https://web-experiments.lab.hum.uu.nl/jspsych/uil-utils/0.0/jspsych-uil-utils.js"></script>
+        <!-- Uil OTS libraries -->
+        <script src="https://web-experiments.lab.hum.uu.nl/jspsych/uil-utils/0.1/jspsych-uil-utils.js"></script>
 
-    <!-- WebGazer -->
-    <script src="./webgazer/webgazer.js"></script>
+        <!-- WebGazer -->
+        <script src="./webgazer/webgazer.js"></script>
+        <script>
+            webgazer.params.saveDataAcrossSessions = false;
+        </script>
 
-     <!-- Uil OTS organised  -->
-    <script src="globals.js"></script>
-    <script src="consent.js"></script>
-    <script src="survey.js"></script>
-    <script src="stimuli.js"></script>
-    <script src="soundtest.js"></script>
+        <!-- Uil OTS organised  -->
+        <script src="globals.js"></script>
+        <script src="consent.js"></script>
+        <script src="survey.js"></script>
+        <script src="stimuli.js"></script>
+        <script src="soundtest.js"></script>
+        <script src="main.js"></script>
 
-    <style>
-    .stimulus {
-        font-size: 30px;
-        font-family: monospace;
-        font-weight: normal;
-    }
+        <style>
+            .stimulus {
+                font-size: 30px;
+                font-family: monospace;
+                font-weight: normal;
+            }
 
-    .instruction {
-        text-align: left;
-        margin: 5% 10% 5% 10%;
-    }
-
-
-    kbd {
-        border-radius: 2px;
-        padding: 2px;
-        border: 1px solid black;
-    }
-
-        /* UU-like Link styles */
-    a {
-        color: rgb(33, 37, 41);
-        text-decoration: underline;
-        transition: 0.2s ease color;
-    }
-
-    a:hover {
-        transition: 0.2s ease color;
-        color: rgb(85, 85, 95);
-    }
-
-    span::after {
-        padding-left: 1%;
-    }
-
-    /* survey layout text-align */
-
-    .survey {
-        text-align: left !important;
-    }
-
-    .jspsych-survey-html-form {
-        text-align: left !important;
-    }
-
-    .jspsych-survey-multi-choice-question {
-        text-align: left !important;
-    }
-
-    .jspsych-survey-multi-choice-horizontal {
-        text-align: left !important;
-    }
-
-    .jspsych-survey-multi-choice-text {
-        text-align: left !important;
-    }
-
-    .jspsych-survey-multi-choice-option {
-        text-align: left !important;
-    }
-
-    /* valid input feedback (survey) */
-
-    input:invalid + span::after {
-        content: '✖';
-    }
-
-    input:valid+span::after {
-        content: '✓';
-    }
-     .jspsych-btn {
-         margin-bottom: 10px;
-     }
-     #calibration-point {
-         background: purple !important;
-         border:0px !important;
-         animation:expand;
-         animation-duration:1.2s;
-     }
-
-     .validation-point {
-         background: purple !important;
-         border:0px !important;
-         animation:expand;
-         animation-duration:1.2s;
-     }
-
-     @keyframes expand {
-         from {
-             transform:scale(3);
-         }
-         to {
-             transform:scale(1);
-         }
-     }
-    </style>
-  </head>
-  <body>
-    <script>
-     var jsPsych = initJsPsych({
-         override_safe_mode : true,
-         extensions: [
-             {type: jsPsychExtensionWebgazer}
-         ],
-         exclusions: {
-             min_width: MIN_WIDTH,
-             min_height: MIN_HEIGHT
-         },
-         on_finish: function() {
-             uil.saveData(ACCESS_KEY);
-         }
-     });
-
-    window.addEventListener('load', function() {
-         let stimuli = pickRandomList();
-
-         var preload = {
-             type: jsPsychPreload,
-             images: [],
-         }
-
-         var browser_data = {
-             type: jsPsychCallFunction,
-             func: uil.browser.getResolutionInfo
-         };
-
-         var enter_fullscreen = {
-             type: jsPsychFullscreen,
-             fullscreen_mode: true
-         }
-
-         var sound_test_instructions = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>We will now play a test sound</p>
-             `,
-             choices: ['Got it'],
-         }
-
-         var camera_instructions = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>In order to participate you must allow the experiment to use your camera.</p>
-                <p>You will be prompted to do this on the next screen.</p>
-                <p>If you do not wish to allow use of your camera, you cannot participate in this experiment.<p>
-                <p>It may take up to 30 seconds for the camera to initialize after you give permission.</p>
-             `,
-             choices: ['Got it'],
-         }
-
-         var init_camera = {
-             type: jsPsychWebgazerInitCamera
-         }
-
-         var calibration_instructions = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>Now you'll calibrate the eye tracking, so that the software can use the image of your eyes to predict where you are looking.</p>
-                <p>You'll see a series of dots appear on the screen. Look at each dot as it appears.</p>
-             `,
-             choices: ['Got it'],
-         }
-
-         var calibration = {
-             type: jsPsychWebgazerCalibrate,
-             calibration_points: [
-                 [25,25],[75,25],[50,50],[25,75],[75,75]
-                 /* [50, 50] */
-             ],
-             repetitions_per_point: 2,
-             randomize_calibration_order: true,
-             calibration_mode: 'view',
-         }
-
-         var validation_instructions = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>Now we'll measure the accuracy of the calibration.</p>
-                <p>Look at each dot as it appears on the screen.</p>
-             `,
-             choices: ['Got it'],
-             post_trial_gap: 1000
-         }
-
-         var validation = {
-             type: jsPsychWebgazerValidate,
-             validation_points: [
-                 [25,25],[75,25],[50,50],[25,75],[75,75]
-                 /* [50, 50] */
-             ],
-             roi_radius: 200,
-             time_to_saccade: 1000,
-             validation_duration: 2000,
-             show_validation_data: true,
-             data: {
-                 task: 'validate'
-             }
-         }
-
-         var recalibrate_instructions = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>The accuracy of the calibration is a little lower than we'd like.</p>
-                <p>Let's try calibrating one more time.</p>
-                <p>On the next screen, look at the dots and click on them.<p>
-             `,
-             choices: ['OK'],
-         }
-
-         var hide_dot = {
-             type: jsPsychCallFunction,
-             func: function() {
-                 jsPsych.extensions["webgazer"].hidePredictions();
-             }
-         }
-
-         var recalibrate = {
-             timeline: [hide_dot, recalibrate_instructions, calibration, validation_instructions, validation, hide_dot],
-             conditional_function: function(){
-                 var validation_data = jsPsych.data.get().filter({task: 'validate'}).values()[0];
-                 return validation_data.percent_in_roi.some(function(x){
-                     var minimum_percent_acceptable = 50;
-                     return x < minimum_percent_acceptable;
-                 });
-             },
-             data: {
-                 phase: 'recalibration'
-             }
-         }
-
-         var calibration_done = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: `
-                <p>Great, we're done with calibration!</p>
-             `,
-             choices: ['OK']
-         }
-
-         var begin = {
-             type: jsPsychHtmlKeyboardResponse,
-             stimulus: `<p>Instructions for the experiment go here</p>
-                        <p>Press any key to start.</p>`
-         }
+            .instruction {
+                text-align: left;
+                margin: 5% 10% 5% 10%;
+            }
 
 
-         var trial = {
-             type: jsPsychAudioKeyboardResponse,
-             stimulus: jsPsych.timelineVariable('sound'),
-             prompt: () => '<img id="image-stimulus" src="'+jsPsych.timelineVariable('image')+'"/>',
-             choices: "NO_KEYS",
-             trial_duration: 5000,
-             extensions: [
-                 {
-                     type: jsPsychExtensionWebgazer,
-                     params: {targets: ['#image-stimulus']}
-                 }
-             ],
-         }
+            kbd {
+                border-radius: 2px;
+                padding: 2px;
+                border: 1px solid black;
+            }
 
-         var practice_procedure = {
-             timeline: [
-                 trial
-             ],
-             timeline_variables: getPracticeItems().table,
-             randomize_order: false,
-         }
+            /* UU-like Link styles */
+            a {
+                color: rgb(33, 37, 41);
+                text-decoration: underline;
+                transition: 0.2s ease color;
+            }
 
-         let start_screen = {
-             type: jsPsychHtmlButtonResponse,
-             stimulus: function() {
-                 return "<div class='instruction' >" +
-                        "<p>Initial instructions go here</p></div>";
-             },
-             choices: [OK_BUTTON_TEXT],
-             response_ends_trial: true
-         };
+            a:hover {
+                transition: 0.2s ease color;
+                color: rgb(85, 85, 95);
+            }
 
-         let timeline = [
-             preload,
-             start_screen,
-             consent_procedure,
-             survey_procedure,
-             sound_test_instructions,
-             test_audio_looped,
-             browser_data,
-             camera_instructions,
-             init_camera,
-             enter_fullscreen,
-             calibration_instructions,
-             calibration,
-             validation_instructions,
-             validation,
-             hide_dot,
-             recalibrate,
-             calibration_done,
-             begin,
-             practice_procedure,
-         ];
+            span::after {
+                padding-left: 1%;
+            }
 
-         if (! uil.browser.isMobileOrTablet()) {
-             jsPsych.run(timeline);
-         }
-         else {
-            let paragraph = document.createElement("p")
-            paragraph.innerHTML = BAIL_OUT_MOBILE_TEXT;
-            document.body.appendChild(paragraph);
-         }
-     });
-    </script>
-  </body>
+            /* survey layout text-align */
+
+            .survey {
+                text-align: left !important;
+            }
+
+            .jspsych-survey-html-form {
+                text-align: left !important;
+            }
+
+            .jspsych-survey-multi-choice-question {
+                text-align: left !important;
+            }
+
+            .jspsych-survey-multi-choice-horizontal {
+                text-align: left !important;
+            }
+
+            .jspsych-survey-multi-choice-text {
+                text-align: left !important;
+            }
+
+            .jspsych-survey-multi-choice-option {
+                text-align: left !important;
+            }
+
+            /* valid input feedback (survey) */
+
+            input:invalid + span::after {
+                content: '✖';
+            }
+
+            input:valid+span::after {
+                content: '✓';
+            }
+            .jspsych-btn {
+                margin-bottom: 10px;
+            }
+            #calibration-point {
+                background: purple !important;
+                border:0px !important;
+                animation:expand;
+                animation-duration:1.2s;
+            }
+
+            .validation-point {
+                background: purple !important;
+                border:0px !important;
+                animation:expand;
+                animation-duration:1.2s;
+            }
+
+            @keyframes expand {
+                from {
+                    transform:scale(3);
+                }
+                to {
+                    transform:scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.addEventListener('load', main);
+        </script>
+    </body>
 </html>
