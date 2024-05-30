@@ -154,6 +154,12 @@ let trial = {
             params: {targets: ['#image-stimulus']}
         }
     ],
+    on_finish: function(data) {
+        data.id = jsPsych.timelineVariable('id');
+        data.item_type = jsPsych.timelineVariable('item_type');
+        data.image = jsPsych.timelineVariable('image');
+        data.sound = jsPsych.timelineVariable('sound');
+    }
 }
 
 
