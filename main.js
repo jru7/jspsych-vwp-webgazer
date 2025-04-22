@@ -19,7 +19,7 @@ let preload = {
 
 let browser_data = {
     type: jsPsychCallFunction,
-    func: () => {uil.browser.getResolutionInfo()}
+    func: () => uil.browser.getResolutionInfo()
 };
 
 let enter_fullscreen = {
